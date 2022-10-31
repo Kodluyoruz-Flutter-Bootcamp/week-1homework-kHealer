@@ -1,4 +1,4 @@
-# Week - NULL
+# Week - 1
 ```1.hafta ödevi```
 
 # Homework 
