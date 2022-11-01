@@ -30,12 +30,12 @@ class _CalculatorState extends State<Calculator> {
         },
         child: Text(
           btntxt,
-          style: TextStyle(color: txtcolor, fontSize: 35),
+          style: TextStyle(color: txtcolor, fontSize: 25),
         ),
         style: ElevatedButton.styleFrom(
-            shape: CircleBorder(),
+            shape: RoundedRectangleBorder(),
             primary: btncolor,
-            padding: EdgeInsets.all(16)),
+            padding: EdgeInsets.all(15)),
       ),
     );
   }
@@ -46,8 +46,8 @@ class _CalculatorState extends State<Calculator> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         titleSpacing: 20,
-        title: Text('Caculator'),
-        backgroundColor: Colors.black,
+        title: Text('Hesap Makinesi'),
+        backgroundColor: Colors.orange[700],
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5),
@@ -59,13 +59,13 @@ class _CalculatorState extends State<Calculator> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Text(
                     text,
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 100,
+                      color: Colors.black87,
+                      fontSize: 90,
                     ),
                   ),
                 ),
@@ -75,10 +75,10 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                calcButton('AC', Colors.grey, Colors.black),
-                calcButton('+/-', Colors.grey, Colors.black),
-                calcButton('%', Colors.grey, Colors.black),
-                calcButton('/', Colors.amber.shade700, Colors.white),
+                calcButton('AC', Colors.red.shade600, Colors.white),
+                calcButton('+/-', Colors.orange.shade600, Colors.white),
+                calcButton('%', Colors.orange.shade600, Colors.white),
+                calcButton('/', Colors.orange.shade600, Colors.white),
               ],
             ),
             SizedBox(
@@ -87,10 +87,10 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                calcButton('7', Colors.grey.shade800, Colors.white),
-                calcButton('8', Colors.grey.shade800, Colors.white),
-                calcButton('9', Colors.grey.shade800, Colors.white),
-                calcButton('x', Colors.amber.shade700, Colors.white),
+                calcButton('7', Colors.white60, Colors.black87),
+                calcButton('8', Colors.white60, Colors.black87),
+                calcButton('9', Colors.white60, Colors.black87),
+                calcButton('x', Colors.orange.shade600, Colors.white),
               ],
             ),
             SizedBox(
@@ -99,22 +99,22 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                calcButton('4', Colors.grey.shade800, Colors.white),
-                calcButton('5', Colors.grey.shade800, Colors.white),
-                calcButton('6', Colors.grey.shade800, Colors.white),
-                calcButton('-', Colors.amber.shade700, Colors.white),
+                calcButton('4', Colors.white60, Colors.black87),
+                calcButton('5', Colors.white60, Colors.black87),
+                calcButton('6', Colors.white60, Colors.black87),
+                calcButton('-', Colors.orange.shade600, Colors.white),
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                calcButton('1', Colors.grey.shade800, Colors.white),
-                calcButton('2', Colors.grey.shade800, Colors.white),
-                calcButton('3', Colors.grey.shade800, Colors.white),
-                calcButton('+', Colors.amber.shade700, Colors.white),
+                calcButton('1', Colors.white60, Colors.black87),
+                calcButton('2', Colors.white60, Colors.black87),
+                calcButton('3', Colors.white60, Colors.black87),
+                calcButton('+', Colors.orange.shade600, Colors.white),
               ],
             ),
             SizedBox(
@@ -125,19 +125,19 @@ class _CalculatorState extends State<Calculator> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      primary: Colors.grey.shade800,
-                      padding: EdgeInsets.fromLTRB(34, 15, 120, 15)),
+                      shape: RoundedRectangleBorder(),
+                      primary: Colors.white60,
+                      padding: EdgeInsets.fromLTRB(20, 13, 110, 15)),
                   onPressed: () {
                     calculation("0");
                   },
                   child: Text(
                     "0",
-                    style: TextStyle(color: Colors.white, fontSize: 35),
+                    style: TextStyle(color: Colors.black87, fontSize: 28),
                   ),
                 ),
-                calcButton('.', Colors.grey.shade800, Colors.white),
-                calcButton('=', Colors.amber.shade700, Colors.white),
+                calcButton('.', Colors.white60, Colors.black87),
+                calcButton('=', Colors.orange.shade800, Colors.white),
               ],
             )
           ],
